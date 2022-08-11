@@ -236,7 +236,7 @@ body{
         background: #fff;
     }
     .main{
-        height: 65vh;
+        height: 85%;
     }
     .footer{ 
         background: var(--color-background);

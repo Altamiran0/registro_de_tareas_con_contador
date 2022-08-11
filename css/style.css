@@ -1,0 +1,258 @@
+:root {
+/*  --color-background: ;
+    --color-principal: ;
+    --color-secundario: ;
+
+    --padding-container: ;
+    --margin-container: ;
+
+    --width-container: ;
+    --max-width-container: ;
+    --height-container: ;
+    --max-height-container: ; */
+    --color-background: #e5e5e5;
+    --opacity: .75;
+    /*     
+    --color-principal: #000;
+
+    --padding-container: 0 20px; */
+}
+
+html{font-size: 16px;}
+
+body{
+    background-image: url(../assets/fondo2.jpg);
+    background-size: cover;    
+}
+
+/* Main ------------------------------------ */
+
+.main{
+    width: 100vw; height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Pomodoro ------------------------------------ */
+
+.pomodoroRegister__container{
+    background: var(--color-background);
+    opacity: var(--opacity);
+    width: 500px; height: 80%;
+    margin: 0 auto;
+
+    border-radius: 10px;    
+    box-shadow: 2px 2px 1px rgb(65, 65, 65);
+}
+
+.pomodoroRegister__title{
+    width: 100%;
+    height: 75px;
+    position: relative;
+
+    font-weight: bold;
+    font-size: 1rem;    
+    font-family: RobotoSlab;
+    
+    display: flex; 
+    align-items: center;
+    justify-content: center;   
+}
+
+.pomodoroRegister__title::after{
+    content: ""; display: block;
+    position: absolute; bottom: 0px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #000;
+}
+
+.pomodoroRegister__item{
+    width: 95%; 
+    margin: 15px auto; padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px rgb(65, 65, 65);
+
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pomodoroRegister__item--title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+    font-family: RobotoSlab;
+}
+
+.pomodoroRegister__item--timer{
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    font-family: WorkSans;
+}
+
+.pomodoroRegister__item--input{
+    width: 500px; height: 50px;
+    border-radius: 10px;    
+    box-shadow: 2px 2px 1px rgb(65, 65, 65);
+
+    background: var(--color-background);
+    opacity: var(--opacity);
+
+    padding: 5px 20px;
+
+    font-weight: 300;
+    font-size: 1.5rem;
+    
+    font-family: RobotoSlab;
+}
+
+/* Footer ------------------------------------ */
+
+.footer{
+    background: var(--color-background);
+    opacity: var(--opacity);
+
+    width: 100vw;
+    height: 15vh;
+
+    padding: 0 20px;
+
+    position: fixed;
+    bottom: 0; left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} 
+
+/* Reloj ------------------------------------ */
+
+.reloj__container{
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reloj__horaActual{
+    font-weight: bold;
+    font-size: 2rem;
+    
+    font-family: RobotoSlab;
+}
+
+.reloj__copy--hs {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.reloj__fechaActual{    
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    font-family: WorkSans;
+}
+
+/* Cronometro ------------------------------- */
+
+.cronometro__container{    
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cronometro__copy{
+    font-weight: bold;
+    font-size: 2rem;
+    
+    font-family: RobotoSlab;
+}
+
+.cronometros__botones{
+    margin-top: 5px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.cronometro__boton{
+    background: #afafaf;
+    height: 40px; width: 40px;
+
+    border: 0px;
+    border-radius: 25%;
+    box-shadow: 2px 2px 3px 1px rgb(156, 156, 156);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cronometro__boton:hover{
+    background-color: #000;
+    box-shadow: 0 0 #fff;
+
+    color: #fff;
+}
+
+@media (max-width: 768px) {  
+    html{ font-size: 12px }
+    body{ 
+        --opacity: .8;
+        background-image: url(../assets/fondo4.jpg);
+    }
+    .cronometro__boton{ height: 30px; width: 30px; }
+    .pomodoroRegister__container{
+        width: 95vw; 
+        margin: 0 auto;
+
+        border-radius: 20px ;    
+        box-shadow: 0 0 0 0;
+    }
+    .pomodoroRegister__item--input{
+        width: 95vw; height: 50px;
+        border-radius: 20px ;    
+        box-shadow: 0 0 0 0;
+    }
+    .footer{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 425px) {  
+    .footer{ 
+        background: var(--color-background);
+        opacity: 1;
+
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: ".     section2 ."
+    } 
+    .reloj__container{ display: none }
+    .cronometro__container{ grid-area: section2}
+    .pomodoroRegister__container{
+        background: var(--color-background);
+        width: 95vw; 
+        margin: 0 auto;
+
+        border-radius: 20px ;    
+        box-shadow: 0 0 0 0;
+    }
+    .pomodoroRegister__item--input{
+        background: var(--color-background);
+        width: 95vw; height: 50px;
+        border-radius: 20px ;    
+        box-shadow: 0 0 0 0;
+    }
+}

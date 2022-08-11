@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/69bbdaf3e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="main">
+        <section class="pomodoroRegister__container">
+            <div class="pomodoroRegister__title">
+                <h1>Pomodoro timer</h1>
+            </div>
+            <ul id="list_item" class="pomodoroRegister__lista"></ul>
+        </section>
+        <input id="input_name" class="pomodoroRegister__item--input" placeholder="Ingrese el titulo">
+    </main>
+
+    <footer class="footer">
+        <section class="reloj__container">
+            <div id="horaActual" class="reloj__horaActual"></div>
+            <div id="fechaActual" class="reloj__fechaActual"></div>
+        </section>
+
+        <section class="cronometro__container">
+            <div class="cronometro__contador">
+                <p id="cronometroContador" class="cronometro__copy"></p>
+            </div>
+            <div class="cronometros__botones">
+                <button id="bInicioPausa" class="cronometro__boton">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button id="bReinicio" class="cronometro__boton">
+                    <i class="fa-solid fa-rotate"></i>
+                </button>
+            </div>
+        </section>
+    </footer>
+</body>
+
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/fonts.css">
+
+
+
+<script src="./js/reloj.js"></script>
+<script src="./js/contador.js"></script>
+
+</html>

@@ -232,6 +232,12 @@ body{
 }
 
 @media (max-width: 425px) {  
+    body{ 
+        background: #fff;
+    }
+    .main{
+        height: 65vh;
+    }
     .footer{ 
         background: var(--color-background);
         opacity: 1;

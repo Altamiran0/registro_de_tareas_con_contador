@@ -118,6 +118,7 @@ body{
 
 .footer{
     background: var(--color-background);
+    opacity: 1;
 
     width: 100vw;
     height: 15vh;
